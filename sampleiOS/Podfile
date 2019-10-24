@@ -6,13 +6,12 @@ target 'sampleiOS' do
   use_frameworks!
 
   # Pods for sampleiOS
-  #pod 'EnxRTCiOS', '~> 1.4.2'
-  pod 'GoogleWebRTC', '1.1.28604'
-        pod 'Socket.IO-Client-Swift', '~> 12.0.0'
-    	pod 'SVProgressHUD'
-    	pod 'ReachabilitySwift'
-        pod 'Crashlytics'
-        pod 'AMBubbleTableViewController'
+  pod 'GoogleWebRTC', '1.1.29229'
+  pod 'Socket.IO-Client-Swift', '~> 15.0.0'
+  pod 'SVProgressHUD'
+  pod 'ReachabilitySwift'
+  pod 'Crashlytics'
+  pod 'AMBubbleTableViewController'
 
   target 'sampleiOSTests' do
     inherit! :search_paths

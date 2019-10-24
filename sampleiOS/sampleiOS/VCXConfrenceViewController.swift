@@ -262,12 +262,12 @@ extension VCXConfrenceViewController : EnxRoomDelegate, EnxStreamDelegate {
         }
         var name = "Unknown"
         for item  in connectedUserArray {
-            if(item.client_Id == (msgDict["source_id"] as! String)){
+            if(item.client_Id == (msgDict["senderId"] as! String)){
                 name = item.name
                 break
             }
         }
-        let sampleDict = ["text": msgDict["msg"] as! String,
+        let sampleDict = ["text": msgDict["message"] as! String,
                           "date":NSDate(),
                           "type":AMBubbleCellReceived,
                           "color":UIColor.blue,
@@ -280,6 +280,30 @@ extension VCXConfrenceViewController : EnxRoomDelegate, EnxStreamDelegate {
         tableView.endUpdates()
         tableView.scrollToRow(at: index, at: .bottom, animated: true)
     }
+    
+    /*
+     This Delegate will notify when internet connection lost.
+     */
+    func room(_ room: EnxRoom, didConnectionLost data: [Any]) {
+        
+    }
+    
+    /*
+     This Delegate will notify on connection interuption example switching from Wifi to 4g.
+     */
+    func room(_ room: EnxRoom, didConnectionInterrupted data: [Any]) {
+        
+    }
+    
+    /*
+     This Delegate will notify reconnect success.
+     */
+    func room(_ room: EnxRoom, didUserReconnectSuccess data: [AnyHashable : Any]) {
+        
+    }
+    
+    
+    
 }
 extension VCXConfrenceViewController: AMBubbleTableDelegate,AMBubbleTableDataSource{
     func didSendText(_ text: String!) {

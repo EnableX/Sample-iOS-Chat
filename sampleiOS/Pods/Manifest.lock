@@ -3,42 +3,43 @@ PODS:
   - Crashlytics (3.13.4):
     - Fabric (~> 1.10.2)
   - Fabric (1.10.2)
-  - GoogleWebRTC (1.1.28604)
+  - GoogleWebRTC (1.1.29229)
   - ReachabilitySwift (4.3.1)
-  - Socket.IO-Client-Swift (12.0.0):
-    - StarscreamSocketIO (~> 8.0.7)
-  - StarscreamSocketIO (8.0.7)
+  - Socket.IO-Client-Swift (15.0.0):
+    - Starscream (~> 3.1)
+  - Starscream (3.1.1)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - AMBubbleTableViewController
   - Crashlytics
-  - GoogleWebRTC (= 1.1.28604)
+  - GoogleWebRTC (= 1.1.29229)
   - ReachabilitySwift
-  - Socket.IO-Client-Swift (~> 12.0.0)
+  - Socket.IO-Client-Swift (~> 15.0.0)
   - SVProgressHUD
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - AMBubbleTableViewController
     - Crashlytics
     - Fabric
-    - GoogleWebRTC
     - ReachabilitySwift
-    - Socket.IO-Client-Swift
-    - StarscreamSocketIO
     - SVProgressHUD
+  trunk:
+    - GoogleWebRTC
+    - Socket.IO-Client-Swift
+    - Starscream
 
 SPEC CHECKSUMS:
   AMBubbleTableViewController: f4426cd8d646fbe4ec5f0d821857cca62c2792b2
   Crashlytics: 2dfd686bcb918dc10ee0e76f7f853fe42c7bd552
   Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
-  GoogleWebRTC: 006112977cf03b7ee4fb898ae1e2016e2312ee0b
+  GoogleWebRTC: ffbf2dca3bdef0fbeebcff497e0a659bd69761c8
   ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
-  Socket.IO-Client-Swift: 5b0154b42b3892bfb4c44fa138cbeb8afec4f6ef
-  StarscreamSocketIO: 00b54e4208481ca5cef089545353aaf126bae16d
+  Socket.IO-Client-Swift: c039a808195d22a7192962841b8c035cb61ea49e
+  Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 0e5eae58929ad5a226f4241045976d19f6c853e0
+PODFILE CHECKSUM: 3c8dbde99a01f4da0ef01cfe587a483e4d88b7a9
 
-COCOAPODS: 1.7.4
+COCOAPODS: 1.8.4

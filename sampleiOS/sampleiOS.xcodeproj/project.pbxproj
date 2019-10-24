@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		04F9DE7C00BC3B2BCFBF5607 /* Pods_sampleiOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4808C905CBDC9EFB9D87F1 /* Pods_sampleiOSUITests.framework */; };
+		27CEB4FF23605B97008A0DA3 /* EnxRTCiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27CEB4FD23605B8C008A0DA3 /* EnxRTCiOS.framework */; };
+		27CEB50023605B97008A0DA3 /* EnxRTCiOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 27CEB4FD23605B8C008A0DA3 /* EnxRTCiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BD0CCFF621AE75E7001711B8 /* VCXAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0CCFF521AE75E7001711B8 /* VCXAppDelegate.swift */; };
 		BD0CCFF821AE75E7001711B8 /* VCXJoinRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0CCFF721AE75E7001711B8 /* VCXJoinRoomViewController.swift */; };
 		BD0CCFFB21AE75E7001711B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD0CCFF921AE75E7001711B8 /* Main.storyboard */; };
@@ -21,8 +23,6 @@
 		BD0CD03021AE8FCF001711B8 /* VCXConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0CD02F21AE8FCF001711B8 /* VCXConstant.swift */; };
 		BD0CD03621AECB90001711B8 /* VCXConfrenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0CD03521AECB90001711B8 /* VCXConfrenceViewController.swift */; };
 		BD0CD03C21B00128001711B8 /* VCXMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0CD03B21B00128001711B8 /* VCXMenuViewController.swift */; };
-		BD4016E123267D9B00517F22 /* EnxRTCiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4016E023267D9B00517F22 /* EnxRTCiOS.framework */; };
-		BD4016E223267D9B00517F22 /* EnxRTCiOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BD4016E023267D9B00517F22 /* EnxRTCiOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BD4EEFA0232766800078776C /* imageInput@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD4EEF7E232766800078776C /* imageInput@2x.png */; };
 		BD4EEFA1232766800078776C /* buttonSend.png in Resources */ = {isa = PBXBuildFile; fileRef = BD4EEF7F232766800078776C /* buttonSend.png */; };
 		BD4EEFA2232766800078776C /* messageBubbleBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD4EEF80232766800078776C /* messageBubbleBlue@2x.png */; };
@@ -87,7 +87,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BD4016E223267D9B00517F22 /* EnxRTCiOS.framework in Embed Frameworks */,
+				27CEB50023605B97008A0DA3 /* EnxRTCiOS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +96,7 @@
 
 /* Begin PBXFileReference section */
 		11CCA7A83599E8550D430F43 /* Pods-sampleiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sampleiOS/Pods-sampleiOS.debug.xcconfig"; sourceTree = "<group>"; };
+		27CEB4FD23605B8C008A0DA3 /* EnxRTCiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EnxRTCiOS.framework; sourceTree = "<group>"; };
 		5D9B8CADAD53F7E5266636F3 /* Pods_sampleiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sampleiOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		637C0DD64C798AE33003571E /* Pods-sampleiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleiOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-sampleiOS/Pods-sampleiOS.release.xcconfig"; sourceTree = "<group>"; };
 		64FCF7EAC6D6F4A277D1CC64 /* Pods-sampleiOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sampleiOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sampleiOSUITests/Pods-sampleiOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -123,7 +124,6 @@
 		BD0CD02F21AE8FCF001711B8 /* VCXConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCXConstant.swift; sourceTree = "<group>"; };
 		BD0CD03521AECB90001711B8 /* VCXConfrenceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCXConfrenceViewController.swift; sourceTree = "<group>"; };
 		BD0CD03B21B00128001711B8 /* VCXMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCXMenuViewController.swift; sourceTree = "<group>"; };
-		BD4016E023267D9B00517F22 /* EnxRTCiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = EnxRTCiOS.framework; sourceTree = "<group>"; };
 		BD4EEF7E232766800078776C /* imageInput@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "imageInput@2x.png"; sourceTree = "<group>"; };
 		BD4EEF7F232766800078776C /* buttonSend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonSend.png; sourceTree = "<group>"; };
 		BD4EEF80232766800078776C /* messageBubbleBlue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "messageBubbleBlue@2x.png"; sourceTree = "<group>"; };
@@ -167,7 +167,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD4016E123267D9B00517F22 /* EnxRTCiOS.framework in Frameworks */,
+				27CEB4FF23605B97008A0DA3 /* EnxRTCiOS.framework in Frameworks */,
 				DC7F441FBFD40AA519463AFD /* Pods_sampleiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,7 +207,6 @@
 		BD0CCFE921AE75E7001711B8 = {
 			isa = PBXGroup;
 			children = (
-				BD4016E023267D9B00517F22 /* EnxRTCiOS.framework */,
 				BD0CCFF421AE75E7001711B8 /* sampleiOS */,
 				BD0CD00921AE75EE001711B8 /* sampleiOSTests */,
 				BD0CD01421AE75EE001711B8 /* sampleiOSUITests */,
@@ -230,6 +229,7 @@
 		BD0CCFF421AE75E7001711B8 /* sampleiOS */ = {
 			isa = PBXGroup;
 			children = (
+				27CEB4FD23605B8C008A0DA3 /* EnxRTCiOS.framework */,
 				BD4EEF7D232766800078776C /* Resources */,
 				BD0CD02E21AE8FC7001711B8 /* VCXHeader */,
 				BD0CD02B21AE8FB5001711B8 /* ServiceClass */,
@@ -809,6 +809,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/sampleiOS",
 				);
 				INFOPLIST_FILE = sampleiOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -837,6 +838,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/sampleiOS",
 				);
 				INFOPLIST_FILE = sampleiOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
