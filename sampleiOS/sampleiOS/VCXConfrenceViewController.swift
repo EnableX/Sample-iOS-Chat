@@ -255,8 +255,7 @@ extension VCXConfrenceViewController : EnxRoomDelegate, EnxStreamDelegate {
     /**
         Recive Chat data at room label
      **/
-    func room(_ room: EnxRoom, didReceiveChatDataAtRoom data: [Any]?) {
-        //print(data);
+    func room(_ room: EnxRoom, didMessageReceived data: [Any]?) {
         guard let msgDict : [String : Any] = data?[0] as? [String : Any]   else {
             return
         }
@@ -279,8 +278,14 @@ extension VCXConfrenceViewController : EnxRoomDelegate, EnxStreamDelegate {
         tableView.insertRows(at: [index], with: .right)
         tableView.endUpdates()
         tableView.scrollToRow(at: index, at: .bottom, animated: true)
+
     }
-    
+    /**
+       Recive Custome data at room label
+    **/
+    func room(_ room: EnxRoom, didUserDataReceived data: [Any]?) {
+        //To Do
+    }
     /*
      This Delegate will notify when internet connection lost.
      */
@@ -302,12 +307,10 @@ extension VCXConfrenceViewController : EnxRoomDelegate, EnxStreamDelegate {
         
     }
     
-    
-    
 }
 extension VCXConfrenceViewController: AMBubbleTableDelegate,AMBubbleTableDataSource{
     func didSendText(_ text: String!) {
-        remoteRoom.sendMessage(text, broadCast: true, clientIds: nil)
+        remoteRoom.sendMessage(text, isBroadCast: true, recipientIDs: nil)
         let dict :[String : Any] = ["text": text!,
                     "date": NSDate(),
                     "type": AMBubbleCellSent,
