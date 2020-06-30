@@ -25,8 +25,10 @@ class VCXServicesClass: NSObject {
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
-        //Create Base64 Encription
-        request.addValue("Basic \(createBase64encoding())", forHTTPHeaderField: "Authorization")
+        if(kTry){
+             request.addValue(kAppId, forHTTPHeaderField: "x-app-id")
+            request.addValue(kAppkey, forHTTPHeaderField: "x-app-key")
+        }
         //create dataTask using the session object to send data to the server
         let tast = session.dataTask(with: request as URLRequest){(data,response, error) in
             guard error == nil else{
@@ -68,13 +70,6 @@ class VCXServicesClass: NSObject {
         }
         tast.resume()
     }
-    
-    class func createBase64encoding() ->String{
-        let headerString = String(format: "%@:%@",userName ,password)
-        let date = headerString.data(using: .utf8)
-        return date!.base64EncodedString(options: NSData.Base64EncodingOptions(rawValue: 0))
-    }
-    
     // MARK: - Join Room With Room ID
     /**
     Input Parameter : - RoomId
@@ -89,6 +84,10 @@ class VCXServicesClass: NSObject {
         request.httpMethod = "GET"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
+        if(kTry){
+             request.addValue(kAppId, forHTTPHeaderField: "x-app-id")
+            request.addValue(kAppkey, forHTTPHeaderField: "x-app-key")
+        }
         //create dataTask using the session object to send data to the server
         let tast = session.dataTask(with: request as URLRequest){(data,response, error) in
             guard error == nil else{
@@ -204,6 +203,10 @@ class VCXServicesClass: NSObject {
         }
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("application/json", forHTTPHeaderField: "Accept")
+        if(kTry){
+             request.addValue(kAppId, forHTTPHeaderField: "x-app-id")
+            request.addValue(kAppkey, forHTTPHeaderField: "x-app-key")
+        }
         //create dataTask using the session object to send data to the server
         let tast = session.dataTask(with: request as URLRequest){(data,response, error) in
             guard error == nil else{

@@ -136,8 +136,8 @@ class VCXConfrenceViewController: AMBubbleTableViewController {
               //  Success Response from server
                 if let token = tokenInfo.token {
                     let videoSize : NSDictionary =  ["minWidth" : 720 , "minHeight" : 480 , "maxWidth" : 1280, "maxHeight" :720]
-                    let localStreamInfo : NSDictionary = ["video" : self.param["video"]! ,"audio" : self.param["audio"]! ,"data" :self.param["chat"]! ,"name" :self.roomInfo.participantName!,"type" : "public" ,"maxVideoBW" : 400 ,"minVideoBW" : 300 , "videoSize" : videoSize]
-                    let roomInfoparam = ["allow_reconnect" : true , "number_of_attempts" : 3,"timeout_interval" : 20, "chat_only" : true] as [String : Any]
+                    let localStreamInfo : NSDictionary = ["video" : self.param["video"]! ,"audio" : self.param["audio"]! ,"data" :self.param["chat"]! ,"name" :self.roomInfo.participantName!,"type" : "public", "chat_only" : true ,"maxVideoBW" : 400 ,"minVideoBW" : 300 , "videoSize" : videoSize]
+                    let roomInfoparam = ["allow_reconnect" : true , "number_of_attempts" : 3,"timeout_interval" : 20] as [String : Any]
                     
                     _ = self.objectJoin.joinRoom(token, delegate: self, publishStreamInfo: (localStreamInfo as! [AnyHashable : Any]), roomInfo: roomInfoparam, advanceOptions: nil)
                 }
@@ -236,8 +236,8 @@ extension VCXConfrenceViewController : EnxRoomDelegate, EnxStreamDelegate {
     /*
      This Delegate will notify to User if Room Got discunnected
      */
-    func roomDidDisconnected(_ status: EnxRoomStatus) {
-        self.navigationController?.popViewController(animated: true)
+    func didRoomDisconnect(_ response: [Any]?) {
+       self.navigationController?.popViewController(animated: true)
     }
     func room(_ room: EnxRoom?, didReceiveData data: [AnyHashable : Any]?, from stream: EnxStream?) {
         //To Do

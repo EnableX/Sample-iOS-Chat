@@ -40,12 +40,7 @@ class VCXJoinRoomViewController: UIViewController  {
         joinBtn.layer.cornerRadius = 8.0
         topView.round(corners: [.topLeft, .topRight], radius: 8.0)
         createRoom.layer.cornerRadius = 8.0
-        if UserDefaults.standard.string(forKey: "Rood_Id") != nil{
-            let userdef = UserDefaults.standard
-            self.roomNameTxt.text = userdef.string(forKey: "Rood_Id")
-            self.nameTxt.text = userdef.string(forKey: "participantName")
-            shareBtn.isHidden = false
-        }
+        
     }
     // MARK: - getFromuserDef
     /**

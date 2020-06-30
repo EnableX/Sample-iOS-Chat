@@ -15,8 +15,8 @@
             timestampString = "589802116.071418"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "93"
-            endingLineNumber = "93"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "clickToJoinRoom(_:)"
             landmarkType = "7">
          </BreakpointContent>
