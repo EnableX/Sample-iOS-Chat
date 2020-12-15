@@ -135,8 +135,8 @@ class VCXConfrenceViewController: AMBubbleTableViewController {
             DispatchQueue.main.async {
               //  Success Response from server
                 if let token = tokenInfo.token {
-                    let videoSize : NSDictionary =  ["minWidth" : 720 , "minHeight" : 480 , "maxWidth" : 1280, "maxHeight" :720]
-                    let localStreamInfo : NSDictionary = ["video" : self.param["video"]! ,"audio" : self.param["audio"]! ,"data" :self.param["chat"]! ,"name" :self.roomInfo.participantName!,"type" : "public", "chat_only" : true ,"maxVideoBW" : 400 ,"minVideoBW" : 300 , "videoSize" : videoSize]
+                    let videoSize : NSDictionary =  ["minWidth" : 320 , "minHeight" : 180 , "maxWidth" : 1280, "maxHeight" :720]
+                    let localStreamInfo : NSDictionary = ["video" : self.param["video"]! ,"audio" : self.param["audio"]! ,"data" :self.param["chat"]! ,"name" :self.roomInfo.participantName!,"type" : "public", "chat_only" : true ,"maxVideoBW" : 120 ,"minVideoBW" : 80 , "videoSize" : videoSize]
                     let roomInfoparam = ["allow_reconnect" : true , "number_of_attempts" : 3,"timeout_interval" : 20] as [String : Any]
                     
                     _ = self.objectJoin.joinRoom(token, delegate: self, publishStreamInfo: (localStreamInfo as! [AnyHashable : Any]), roomInfo: roomInfoparam, advanceOptions: nil)

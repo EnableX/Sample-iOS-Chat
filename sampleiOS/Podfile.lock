@@ -2,7 +2,7 @@ PODS:
   - AMBubbleTableViewController (0.5.4)
   - Crashlytics (3.14.0):
     - Fabric (~> 1.10.2)
-  - EnxRTCiOS (1.6.0):
+  - EnxRTCiOS (1.8.0):
     - GoogleWebRTC (= 1.1.29400)
   - Fabric (1.10.2)
   - GoogleWebRTC (1.1.29400)
@@ -34,9 +34,9 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AMBubbleTableViewController: f4426cd8d646fbe4ec5f0d821857cca62c2792b2
-  Crashlytics: 540b7e5f5da5a042647227a5e3ac51d85eed06df
-  EnxRTCiOS: 3004e4cd586374ba6b6d6355288de54b75f7d2f6
-  Fabric: 706c8b8098fff96c33c0db69cbf81f9c551d0d74
+  Crashlytics: 9220f5bc89e7a618df411b4f639389dbfb0e03d2
+  EnxRTCiOS: 020a305b740896c5a2bf710ac854d886d174d684
+  Fabric: ea977e3cd9c20425516d3dafd3bf8c941c51223f
   GoogleWebRTC: cfb83bc346435a17fe06bb05f04ad826b858a7fb
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   Socket.IO-Client-Swift: c039a808195d22a7192962841b8c035cb61ea49e
@@ -45,4 +45,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 71cc24b1815047ee1e121126d4f14aac368166c9
 
-COCOAPODS: 1.9.3
+COCOAPODS: 1.10.0
