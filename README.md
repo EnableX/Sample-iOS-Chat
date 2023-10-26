@@ -1,11 +1,15 @@
-#  A Sample Chat App with EnableX iOS Toolkit
+# Building a Chat App with EnableX iOS Toolkit: A Sample Application Guide
 
-This is a sample Chat App that demonstrates the use of  EnableX platform Server APIs (https://www.enablex.io/developer/video-api/server-api) and iOS Toolkit (https://www.enablex.io/developer/video-api/client-api/ios-toolkit/) to build iOS chat application. It allows developers to ramp up on app development by hosting on their own devices. 
+A Video Chat App with EnableX iOS Toolkit
 
-This App creates a virtual Room on the fly  hosted on the Enablex platform using REST calls and uses the Room credentials (i.e. Room Id) to connect to the virtual Room as a mobile client.  The same Room credentials can be shared with others to join the same virtual Room to carry out an RTC (Real-Time Communication) session. 
+This Sample Video-iOS-chat Application is the one-stop solution for building robust real-time chat applications on iOS devices. Using EnableX's Video APIs (https://www.enablex.io/developer/video-api/server-api) and iOS Toolkit (https://www.enablex.io/developer/video-api/client-api/ios-toolkit/), this sample iOS application simplifies the complexities of integrating real-time communication (RTC) into your mobile apps.
+
+Key Features
+Virtual Room Creation: This application dynamically creates a virtual room on EnableX’s cloud platform using REST API calls.
+Multi-User Compatibility: Share the Room ID to invite others for a seamless RTC experience.
+Quick Testing Environment: The app comes pre-configured to work with EnableX's hosted application server for quick testing.
 
 > EnableX Developer Center: https://developer.enablex.io/
-
 
 ## 1. How to get started
 
