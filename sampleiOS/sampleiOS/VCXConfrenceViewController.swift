@@ -135,11 +135,11 @@ class VCXConfrenceViewController: AMBubbleTableViewController {
             DispatchQueue.main.async {
               //  Success Response from server
                 if let token = tokenInfo.token {
-                    let videoSize : NSDictionary =  ["minWidth" : 320 , "minHeight" : 180 , "maxWidth" : 1280, "maxHeight" :720]
-                    let localStreamInfo : NSDictionary = ["video" : self.param["video"]! ,"audio" : self.param["audio"]! ,"data" :self.param["chat"]! ,"name" :self.roomInfo.participantName!,"type" : "public", "chat_only" : true ,"maxVideoBW" : 120 ,"minVideoBW" : 80 , "videoSize" : videoSize]
+                    let videoSize : [String : Any] =  ["minWidth" : 320 , "minHeight" : 180 , "maxWidth" : 1280, "maxHeight" :720]
+                    let localStreamInfo : [String : Any] = ["video" : self.param["video"]! ,"audio" : self.param["audio"]! ,"data" :self.param["chat"]! ,"name" :self.roomInfo.participantName!,"type" : "public", "chat_only" : true ,"maxVideoBW" : 120 ,"minVideoBW" : 80 , "videoSize" : videoSize]
                     let roomInfoparam = ["allow_reconnect" : true , "number_of_attempts" : 3,"timeout_interval" : 20] as [String : Any]
                     
-                    _ = self.objectJoin.joinRoom(token, delegate: self, publishStreamInfo: (localStreamInfo as! [AnyHashable : Any]), roomInfo: roomInfoparam, advanceOptions: nil)
+                    let Stream = self.objectJoin.joinRoom(token, delegate: self, publishStreamInfo: localStreamInfo, roomInfo: roomInfoparam, advanceOptions: nil)
                 }
                 //Handel if Room is full
                 else if (tokenInfo.token == nil && tokenInfo.error == nil){
@@ -181,11 +181,15 @@ class VCXConfrenceViewController: AMBubbleTableViewController {
  Delegates Methods
  */
 extension VCXConfrenceViewController : EnxRoomDelegate, EnxStreamDelegate {
+    func room(_ room: EnxRoom?, didAddedStream stream: EnxStream?) {
+        //todo
+    }
+    
     //Mark - EnxRoom Delegates
     /*
      This Delegate will notify to User Once he got succes full join Room
      */
-    func room(_ room: EnxRoom?, didConnect roomMetadata: [AnyHashable : Any]?) {
+    func room(_ room: EnxRoom?, didConnect roomMetadata: [String : Any]?) {
         remoteRoom = room
         EnxToastView.showInParent(parentView: self.view, withText: "Room Connection succesful", forDuration: 1.0)
         guard roomMetadata?["userList"] as? [Any] != nil else{
@@ -239,9 +243,6 @@ extension VCXConfrenceViewController : EnxRoomDelegate, EnxStreamDelegate {
     func didRoomDisconnect(_ response: [Any]?) {
        self.navigationController?.popViewController(animated: true)
     }
-    func room(_ room: EnxRoom?, didReceiveData data: [AnyHashable : Any]?, from stream: EnxStream?) {
-        //To Do
-    }
     /*
      This Delegate will notify to User if any new User Reconnect the room
      */
@@ -289,28 +290,31 @@ extension VCXConfrenceViewController : EnxRoomDelegate, EnxStreamDelegate {
     /*
      This Delegate will notify when internet connection lost.
      */
-    func room(_ room: EnxRoom, didConnectionLost data: [Any]) {
+    func room(_ room: EnxRoom?, didConnectionLost data: [Any]?) {
         
     }
     
     /*
      This Delegate will notify on connection interuption example switching from Wifi to 4g.
      */
-    func room(_ room: EnxRoom, didConnectionInterrupted data: [Any]) {
+    func room(_ room: EnxRoom?, didConnectionInterrupted data: [Any]?) {
         
     }
     
     /*
      This Delegate will notify reconnect success.
      */
-    func room(_ room: EnxRoom, didUserReconnectSuccess data: [AnyHashable : Any]) {
+    func room(_ room: EnxRoom?, didUserReconnectSuccess data: [String : Any]?) {
         
     }
     
 }
 extension VCXConfrenceViewController: AMBubbleTableDelegate,AMBubbleTableDataSource{
     func didSendText(_ text: String!) {
-        remoteRoom.sendMessage(text, isBroadCast: true, recipientIDs: nil)
+        guard remoteRoom != nil else {
+            return
+        }
+        remoteRoom.sendMessage(text, isBroadCast: true, recipientIDs: [])
         let dict :[String : Any] = ["text": text!,
                     "date": NSDate(),
                     "type": AMBubbleCellSent,
