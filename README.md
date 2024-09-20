@@ -2,7 +2,7 @@
 
 A Video Chat App with EnableX iOS Toolkit
 
-This Sample Video-iOS-chat Application is the one-stop solution for building robust real-time chat applications on iOS devices. Using EnableX's Video APIs (https://www.enablex.io/developer/video-api/server-api) and iOS Toolkit (https://www.enablex.io/developer/video-api/client-api/ios-toolkit/), this sample iOS application simplifies the complexities of integrating real-time communication (RTC) into your mobile apps.
+This Sample Video-iOS-chat Application is the one-stop solution for building robust real-time chat applications on iOS devices. Using EnableX's Video APIs (https://developer.enablex.io/docs/references/apis/video-api/index/) and iOS Toolkit (https://developer.enablex.io/docs/references/sdks/video-sdk/ios-sdk/index), this sample iOS application simplifies the complexities of integrating real-time communication (RTC) into your mobile apps.
 
 Key Features
 Virtual Room Creation: This application dynamically creates a virtual room on EnableX’s cloud platform using REST API calls.
@@ -83,15 +83,15 @@ Note the following:
 * Application Server is created using EnableX Server API while Rest API Service helps in provisioning, session access and post-session reporting.  
 
 To know more about Server API, go to:
-https://www.enablex.io/developer/video-api/server-api
+https://developer.enablex.io/docs/references/apis/video-api/index/
 
 
 ## 3. iOS Toolkit
 
 This Sample Applcation uses EnableX iOS Toolkit to communicate with EnableX Servers to initiate and manage Real-Time Communications. Please update your Application with latest version of EnableX IOS Toolkit as and when a new release is available.   
 
-* Documentation: https://www.enablex.io/developer/video-api/client-api/ios-toolkit/
-* Download Toolkit: https://www.enablex.io/developer/video-api/client-api/ios-toolkit/
+* Documentation: https://developer.enablex.io/docs/references/sdks/video-sdk/ios-sdk/index/
+* Download Toolkit: https://developer.enablex.io/docs/references/sdks/video-sdk/ios-sdk/index/
 
 
 ## 4. Application Walk-through
@@ -101,14 +101,13 @@ This Sample Applcation uses EnableX iOS Toolkit to communicate with EnableX Serv
 We create a Token for a Room Id to get connected to EnableX platform to connect to the Virtual Room to carry out an RTC Session.
 
 To create Token, we make use of Server API. Refer following documentation:
-https://www.enablex.io/developer/video-api/server-api/rooms-route/#create-token
+https://developer.enablex.io/docs/references/apis/video-api/content/api-routes/#create-a-room
 
 
 ### 4.2 Connect to a Room
 
 We use the Token to get connected to the Virtual Room. Once connected with room, user in same room can exchange their message to each other.
-https://www.enablex.io/developer/video-api/client-api/ios-toolkit/room-connection/#connect-room
-
+https://developer.enablex.io/docs/references/sdks/video-sdk/ios-sdk/room-connection/index/
 
 ### 4.3 Send Data
 ``` 
