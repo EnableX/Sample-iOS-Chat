@@ -17,7 +17,7 @@ Quick Testing Environment: The app comes pre-configured to work with EnableX's h
 
 #### 1.1.1 App Id and App Key 
 
-* Register with EnableX [https://portal.enablex.io/cpaas/trial-sign-up/] 
+* Register with EnableX [https://www.enablex.io/free-trial/] 
 * Create your Application
 * Get your App ID and App Key delivered to your email
 
@@ -33,7 +33,7 @@ You need to set up an Application Server to provision Web Service API for your i
 
 To help you to try our iOS Application quickly, without having to set up Application Server, this Application is shipped pre-configured to work in a "try" mode with EnableX hosted Application Server i.e. https://demo.enablex.io. 
 
-Our Application Server restricts a single Session Duations to 10 minutes, and allows 1 moderator and not more than 1 participant in a Session.
+Our Application Server restricts a single Session Durations to 10 minutes, and allows 1 moderator and not more than 1 participant in a Session.
 
 Once you tried EnableX iOS Sample Application, you need to set up your own  Application Server and verify your Application to work with your Application Server.  Refer to point 2 for more details on this.
 
@@ -83,7 +83,7 @@ Note the following:
 * Application Server is created using EnableX Server API while Rest API Service helps in provisioning, session access and post-session reporting.  
 
 To know more about Server API, go to:
-https://developer.enablex.io/docs/references/apis/video-api/index/
+https://developer.enablex.io/docs/guides/video-guide/sample-codes/video-calling-app/#demo-application-server
 
 
 ## 3. iOS Toolkit
@@ -162,5 +162,5 @@ To handle any chat recieve at room */
 EnableX provides hosted Demo Application Server of different use-case for you to try out.
 
 1. Try a quick Video Call: https://try.enablex.io
-2. Sign up for a free trial https://portal.enablex.io/cpaas/trial-sign-up/
+2. Sign up for a free trial https://www.enablex.io/free-trial/
 
