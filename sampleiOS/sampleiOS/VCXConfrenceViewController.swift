@@ -275,10 +275,12 @@ extension VCXConfrenceViewController : EnxRoomDelegate, EnxStreamDelegate {
             ] as [String : Any]
         chatArray.add(sampleDict)
         let index = IndexPath(row: chatArray.count - 1, section: 0)
-        tableView.beginUpdates()
-        tableView.insertRows(at: [index], with: .right)
-        tableView.endUpdates()
-        tableView.scrollToRow(at: index, at: .bottom, animated: true)
+        DispatchQueue.main.async { [self] in
+            tableView.beginUpdates()
+            tableView.insertRows(at: [index], with: .right)
+            tableView.endUpdates()
+            tableView.scrollToRow(at: index, at: .bottom, animated: true)
+        }
 
     }
     /**

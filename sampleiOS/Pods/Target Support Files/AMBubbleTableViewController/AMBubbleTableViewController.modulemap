@@ -1,0 +1,6 @@
+framework module AMBubbleTableViewController {
+  umbrella header "AMBubbleTableViewController-umbrella.h"
+
+  export *
+  module * { export * }
+}
